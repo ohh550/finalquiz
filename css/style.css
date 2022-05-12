@@ -1,0 +1,399 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap");
+@-webkit-keyframes block {
+  to {
+    height: 40vh;
+  }
+}
+@keyframes block {
+  to {
+    height: 40vh;
+  }
+}
+
+@-webkit-keyframes load {
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@keyframes load {
+  to {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes content {
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+@keyframes content {
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body * {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+#content {
+  position: absolute;
+  width: 1400px;
+  max-width: 95vw;
+  height: 85vh;
+  top: -100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 3px 3px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  background: #fff;
+  border-radius: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  opacity: 0;
+  -webkit-animation-name: load;
+          animation-name: load;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#content header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: -50px;
+  -webkit-animation-name: content;
+          animation-name: content;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: .8s;
+          animation-delay: .8s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#content header p.name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 30px;
+}
+
+#content main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  top: 50px;
+  opacity: 0;
+  -webkit-animation-name: content;
+          animation-name: content;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#content main .questionBox {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-transform: translateX(50%);
+          transform: translateX(50%);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  opacity: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  background: #fff;
+}
+
+#content main .questionBox#question1 {
+  z-index: 10;
+}
+
+#content main .questionBox#question2 {
+  z-index: 11;
+}
+
+#content main .questionBox#question3 {
+  z-index: 12;
+}
+
+#content main .questionBox#question4 {
+  z-index: 13;
+}
+
+#content main .questionBox#question5 {
+  z-index: 14;
+}
+
+#content main .questionBox#question6 {
+  z-index: 15;
+}
+
+#content main .questionBox#question7 {
+  z-index: 16;
+}
+
+#content main .questionBox#question8 {
+  z-index: 17;
+}
+
+#content main .questionBox#question9 {
+  z-index: 18;
+}
+
+#content main .questionBox#question9 .answers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 15px;
+}
+
+#content main .questionBox#question9 .answers .box {
+  width: 49%;
+  font-size: 14px;
+  padding: 15px 0 0 0;
+}
+
+#content main .questionBox#question9 .answers .box:not(:nth-last-of-type(odd)) {
+  padding: 15px 15px 0 0;
+}
+
+#content main .questionBox#question9 .answers .box p:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 22px;
+}
+
+#content main .questionBox#question9 .answers .box p:nth-of-type(1) span {
+  font-weight: normal;
+  padding: 0 0 0 5px;
+}
+
+#content main .questionBox#question9 .answers .box p:nth-of-type(2), #content main .questionBox#question9 .answers .box p:nth-of-type(3) {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#content main .questionBox#question9 .answers .box p:nth-of-type(2) span, #content main .questionBox#question9 .answers .box p:nth-of-type(3) span {
+  font-weight: normal;
+  padding: 0 0 0 5px;
+}
+
+#content main .questionBox#question9 .answers .box p.text {
+  padding: 5px 0 0;
+  font-weight: normal;
+}
+
+#content main .questionBox#question9 button.continue.optionSelected {
+  margin: 30px 0 0;
+}
+
+#content main .questionBox.activeBox, #content main .questionBox.answeredBox {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-user-select: initial;
+     -moz-user-select: initial;
+      -ms-user-select: initial;
+          user-select: initial;
+  pointer-events: initial;
+  opacity: 1;
+}
+
+#content main .questionBox p.question {
+  font-size: 24px;
+}
+
+#content main .questionBox .options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 30px 0;
+  width: 100%;
+  max-width: 960px;
+}
+
+#content main .questionBox .options .opt {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px 10px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 5px;
+  margin: 0 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+#content main .questionBox .options .opt:hover {
+  border-color: #4b5320;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+#content main .questionBox .options .opt.selected {
+  border-color: #4b5320;
+}
+
+#content main .questionBox button.continue {
+  padding: 10px 30px;
+  border-radius: 15px;
+  background: #ccc;
+  color: #000;
+  border: none;
+  font-size: 16px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+#content main .questionBox button.continue.optionSelected {
+  background: #708111;
+  color: #fff;
+  pointer-events: initial;
+  cursor: pointer;
+}
+
+#content main .questionBox button.continue.optionSelected:hover {
+  -webkit-transform: translateX(5px);
+          transform: translateX(5px);
+}
+
+#content .progress {
+  width: 95%;
+  height: 10px;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+  background: #92a13e;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  top: 40px;
+  opacity: 0;
+  -webkit-animation-name: content;
+          animation-name: content;
+  -webkit-animation-duration: .5s;
+          animation-duration: .5s;
+  -webkit-animation-delay: 1.2s;
+          animation-delay: 1.2s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+#content .progress .progress_bar {
+  -webkit-transition: all .25s ease-in-out;
+  transition: all .25s ease-in-out;
+  height: 10px;
+  border-radius: 10px;
+  background: #45500a;
+}
+
+.stripe {
+  position: fixed;
+  bottom: 0;
+  height: 0;
+  width: 100%;
+  background: #4b5320;
+  -webkit-animation-name: block;
+          animation-name: block;
+  -webkit-animation-duration: .6s;
+          animation-duration: .6s;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
